@@ -1,16 +1,18 @@
 return {
-	'sainnhe/everforest',
-	lazy = false,
-	priority = 1000,
+	'navarasu/onedark.nvim',
 	config = function()
-		-- Optionally configure and load the colorscheme
-		-- directly inside the plugin declaration.
-		vim.g.everforest_enable_italic = true
-		vim.cmd.colorscheme('everforest')
-		require'lualine'.setup {
-          options = {
-            theme = 'everforest'
-          }
-        }
+		require('onedark').setup {
+			style = 'darker',
+			  code_style = {
+        comments = 'italic',
+        keywords = 'none',
+        functions = 'italic',
+        strings = 'none',
+        variables = 'none'
+    },
+		}
+
+		require('onedark').load()
 	end
 }
+
