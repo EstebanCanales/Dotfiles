@@ -3,7 +3,7 @@ return {
 	enabled = true,
 	function(lspconfig)
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-		lspconfig.cssl.setup({
+		lspconfig.cssls.setup({
 			capabilities = capabilities
 		})
 	end
