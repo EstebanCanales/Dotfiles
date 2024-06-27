@@ -29,7 +29,7 @@ for_window [class="^.*"] border pixel 0
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec xwallpaper --center  Downloads/wallpaperbetter.jpg
+exec xwallpaper --focus  Downloads/wallpaperbetter.jpg
 exec_always --no-startup-id picom -CGb --config ~/.config/picom/picom.conf
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -66,8 +66,8 @@ bindsym $mod+q kill
 
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+p exec rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
