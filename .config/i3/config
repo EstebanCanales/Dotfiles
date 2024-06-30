@@ -7,6 +7,8 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# ECHOS
+
 
 set $mod Mod4
 
@@ -30,6 +32,7 @@ for_window [class="^.*"] border pixel 0
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec xwallpaper --focus  Downloads/wallpaperbetter.jpg
+exec_always polybar --config=Dotfiles/.config/polybar/config.ini  
 exec_always --no-startup-id picom -CGb --config ~/.config/picom/picom.conf
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.

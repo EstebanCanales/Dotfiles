@@ -1,6 +1,5 @@
 return {
 	"lua_ls",          -- nombre
-	enabled = true,    -- si esta activo
 	function(lspconfig) -- el parametro de config
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		lspconfig.lua_ls.setup {
