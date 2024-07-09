@@ -31,7 +31,7 @@ for_window [class="^.*"] border pixel 0
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec xwallpaper --focus  Downloads/wallpaperbetter.jpg
+exec xwallpaper --zoom Downloads/AndromedaDark.jpg
 exec_always polybar --config=Dotfiles/.config/polybar/config.ini  
 exec_always --no-startup-id picom -CGb --config ~/.config/picom/picom.conf
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so

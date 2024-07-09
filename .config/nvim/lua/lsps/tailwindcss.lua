@@ -6,4 +6,4 @@ config = function(lspconfig)
       capabilities = capabilities,
     })
   end
-}
+} 

@@ -34,55 +34,29 @@
 -- SONOKAI
 --
 
-return {
-	'sainnhe/sonokai',
-	lazy = false,
-	priority = 1000,
-	config = function()
+ -- return {
+ -- 	'sainnhe/sonokai',
+ -- 	lazy = false,
+ -- 	priority = 1000,
+ -- 	config = function()
 
-		vim.g.sonokai_enable_italic = true
-		vim.cmd.colorscheme('sonokai')
-	end
-}
+ -- 		vim.g.sonokai_enable_italic = true
+ -- 		vim.cmd.colorscheme('sonokai')
+ -- 	end
+ -- }
 
 
 --
 -- PONOKAI
 --
--- return {
---       'shawilly/ponokai',
---       lazy = false,
---       priority = 1000,
---       config = function()
---         -- Optionally configure and load the colorscheme
---         -- directly inside the plugin declaration.
---         vim.g.sonokai_enable_italic = true
---         vim.cmd.colorscheme('ponokai')
---       end
---     }
-
-
-
-
---
--- ONE DARK PRO
---
-
--- return {
--- 	'navarasu/onedark.nvim',
--- 	config = function()
--- 		require('onedark').setup {
--- 			style = 'darker',
--- 			  code_style = {
---         comments = 'italic',
---         keywords = 'none',
---         functions = 'italic',
---         strings = 'none',
---         variables = 'none'
---     },
--- 		}
---
--- 		require('onedark').load()
--- 	end
--- }
---
+ return {
+ 	'shawilly/ponokai',
+ 	lazy = false,
+ 	priority = 1000,
+ 	config = function()
+ 		-- Optionally configure and load the colorscheme
+ 		-- directly inside the plugin declaration.
+ 		vim.g.sonokai_enable_italic = true
+ 		vim.cmd.colorscheme('ponokai')
+ 	end
+ }
