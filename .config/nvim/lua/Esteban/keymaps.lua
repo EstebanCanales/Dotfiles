@@ -26,4 +26,9 @@ vim.keymap.set("n", "<C-j>", [[<Cmd>wincmd j<CR>]], { desc = "Move down" })
 vim.keymap.set("n", "<C-k>", [[<Cmd>wincmd k<CR>]], { desc = "Move up" })
 vim.keymap.set("n", "<C-l>", [[<Cmd>wincmd l<CR>]], { desc = "Move right" })
 vim.keymap.set("n", "<leader>cn", [[<Cmd> NoiceDismiss <CR>]], { desc = "Dismiss Noice notifications" })
+
 -- Keymaps para hacer split
+vim.keymap.set("n", "<leader>sh", [[<Cmd>split<CR>]], { desc = "Split horizontal" })
+vim.keymap.set("n", "<leader>sv", [[<Cmd>vsplit<CR>]], { desc = "Split horizontal" })
+
+

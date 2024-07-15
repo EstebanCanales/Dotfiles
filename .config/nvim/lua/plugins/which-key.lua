@@ -4,7 +4,7 @@ return {
 	cmd = "WhichKey",
 	opts = {
 		window = {
-			border = "single",
+			border = "none",
 			padding = { 0, 0, 0, 0 }
 		}
 	},
@@ -14,9 +14,6 @@ return {
 			WhichKeyFloat = { bg = "none" },
 			FloatBorder = { bg = "none" },
 			WhichKeySeparator = { bg = "none" },
-
-
-
 		})
 	end,
 }
