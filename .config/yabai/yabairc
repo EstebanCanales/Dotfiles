@@ -1,0 +1,23 @@
+# Layout
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+
+# padding 
+yabai -m config top_padding 10
+yabai -m config bottom_padding 10
+yabai -m config left_padding 10
+yabai -m config window_gap 10
+yabai -m config right_padding 10
+
+# Window border
+yabai -m config window_border on
+
+# Mouse settings 
+yabai -m config mouse_follows_focus on 
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yaibai -m config mouse_action2 resize
+
+yabiar -m mouse_drop_actios swap
+
+

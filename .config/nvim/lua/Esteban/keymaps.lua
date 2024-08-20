@@ -12,13 +12,6 @@ vim.keymap.set("n", "<leader>e", function()
     end
 end, { desc = "Toggle Explorer Focus" })
 
--- Keymap para fastidiar
--- keymap.set({"n", "i"}, "<Up>", function() vim.cmd("qall!") end)
--- keymap.set({"n", "i"}, "<Down>", function() vim.cmd("qall!") end)
--- keymap.set({"n", "i"}, "<Right>", function() vim.cmd("qall!") end)
--- keymap.set({'n', 'i'}, "<Left>", function() vim.cmd("qall!") end)
-
-
 -- Keymaps para moverse en la terminal
 vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
 vim.keymap.set("n", "<C-h>", [[<Cmd>wincmd h<CR>]], { desc = "Move left" })

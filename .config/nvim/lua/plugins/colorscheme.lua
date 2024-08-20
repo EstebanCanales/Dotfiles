@@ -1,6 +1,4 @@
--- Lua
-
-return {
+ return {
 	'olivercederborg/poimandres.nvim',
 	lazy = false,
 	priority = 1000,
@@ -16,13 +14,9 @@ return {
 	init = function()
 		vim.cmd("colorscheme poimandres")
 	end
-}
 
 
 
-
-
--- return {
 -- 	'navarasu/onedark.nvim',
 -- 	config = function()
 -- 		require('onedark').setup({
@@ -49,16 +43,12 @@ return {
 -- 		})
 -- 		require('onedark').load()
 -- 	end
--- }
 
 
 
 
---
 --- SONOKAI
 
-
---return {
 --	'sainnhe/sonokai',
 --	lazy = false,
 --	priority = 1000,
@@ -68,10 +58,6 @@ return {
 --	end
 --}
 
-
---
--- PONOKAI
---
 -- return {
 -- 	'shawilly/ponokai',
 -- 	lazy = false,
@@ -82,4 +68,4 @@ return {
 -- 		vim.g.sonokai_enable_italic = true
 -- 		vim.cmd.colorscheme('ponokai')
 -- 	end
--- }
+}
