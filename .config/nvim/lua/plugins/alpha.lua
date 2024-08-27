@@ -143,7 +143,7 @@ return {
 			val = {
 				{
 					type = "text",
-					val = string.rep("─", 50),
+					val = string.rep("~", 50),
 					opts = {
 						hl = "FloatBorder",
 						position = "center",
@@ -176,7 +176,7 @@ return {
 					{ icon = ' ', hl = { { 'Normal', 1, 2 }, { 'Normal', 3, 52 } } }
 				),
 				-- OTHER ICOSn
-				--Variable = "",
+				--Variable = "", 
 				--Class = "",
 				--Interface = "",
 				--Module = "",
@@ -185,7 +185,7 @@ return {
 				--Struct = "",
 				{
 					type = "text",
-					val = string.rep("─", 50),
+					val = string.rep("~", 50),
 					opts = {
 						hl = "FloatBorder",
 						position = "center",
