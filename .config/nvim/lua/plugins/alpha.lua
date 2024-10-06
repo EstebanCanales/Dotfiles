@@ -141,14 +141,6 @@ return {
 		local buttons = {
 			type = 'group',
 			val = {
-				{
-					type = "text",
-					val = string.rep("~", 50),
-					opts = {
-						hl = "FloatBorder",
-						position = "center",
-					}
-				},
 				{ type = 'padding', val = 1 },
 				button("f", "Find File", ":Telescope find_files<CR>",
 					{ icon = '󰱼 ', hl = { { 'Keyword', 1, 2 }, { 'Normal', 3, 52 } } }
@@ -183,14 +175,6 @@ return {
 				--Property = "",
 				--Unit = "",
 				--Struct = "",
-				{
-					type = "text",
-					val = string.rep("~", 50),
-					opts = {
-						hl = "FloatBorder",
-						position = "center",
-					},
-				},
 			}
 		}
 
