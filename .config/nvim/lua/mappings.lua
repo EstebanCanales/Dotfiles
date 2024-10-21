@@ -14,5 +14,14 @@ map("n", "<leader>cn", [[<Cmd> NoiceDismiss <CR>]], { desc = "Dismiss Noice noti
 map("n", "<leader>sh", [[<Cmd>split<CR>]], { desc = "Split horizontal" })
 map("n", "<leader>sv", [[<Cmd>vsplit<CR>]], { desc = "Split horizontal" })
 
+map("n", "<leader>o", ":Oil<CR>", { desc = "Open oil" })
 
+map("n", "<leader>th", function()
+  require("nvchad.themes").open { border = true }
+end, {})
+
+map("n", "<leader>me", function()
+  local menu_exploration = require "utils.menu-exploration"
+  require("menu").open(menu_exploration.options, {border = true})
+end)
 

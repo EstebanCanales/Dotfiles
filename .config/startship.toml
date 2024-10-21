@@ -1,5 +1,7 @@
 
-add_newline = false  
+# Inserts a blank line between shell prompts
+add_newline = false 
+
 palette = "catppuccin_mocha"
 format = """
 $directory\
@@ -89,4 +91,5 @@ format = '(via [$symbol($version )]($style))'
 
 [dotnet]
 format = '(via [$symbol($version )]($style))'
+
 

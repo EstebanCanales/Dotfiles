@@ -8,10 +8,9 @@ local M = {}
 
 M.base46 = {
   theme = "catppuccin",
-  hl_add = {},
-   hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
+  hl_override = {
+    Comment = { italic = true, bold = true },
+    ["@comment"] = { italic = true, bold = true },
   },
   integrations = {},
   transparency = true,
@@ -20,50 +19,31 @@ M.base46 = {
 M.colorify = {
   enabled = true,
   mode = "virtual", -- fg, bg, virtual
-  virt_text = "󱓻 ",
+  -- virt_text = "󱓻 ",
+  virt_text = "◉ ",
   highlight = { hex = true, lspvars = true },
 }
 
 M.ui = {
+  telescope = { style = "borderless" }, -- borderless / bordered
+
+  cmp = {
+    style = "atom_colored", -- default/flat_light/flat_dark/atom/atom_colored
+    sparator_style = "block",
+    format_colors = {
+      tailwind = true,
+    },
+  },
+
+  statusline = {
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+  },
+
   tabufline = {
     enabled = false,
   },
 
-}
-
-M.nvdash = {
-  load_on_startup = false,
-
-  header = {
-    "                                                           ",
-    "                                                           ",
-    "  ░░░▒▒▒▒░░░░                         ▒█▒                  ",
-    " ░█▓▒▒▒▒▒▒▓██████████▒░                                    ",
-    "                     ▒██████▒░                             ",
-    "                            ▒████▓░                        ",
-    "         ░▒████████████▓░░       ▒████░                    ",
-    "      ░███▒            ░▓██████▒░    ░████░                ",
-    "    ▒█▒                        ▒████▒    ▒███░  ░██        ",
-    "   ▒█▒         ░▓██████     ░░      ████░   ▒██▒           ",
-    "   ▒█░      ░███░ ███░   ███████▒      ▒██▒   ░██▓         ",
-    "    ██░     ██   ░██░  ░█▓      ██  ░    ░██░   ░██▒       ",
-    "    ░██░    ▒█▒    ▓██▒         ▓█░░██▓    ▒█▒    ▒██      ",
-    "      ▓██    ▒██░     ▓███▒     ▓▓    ██   ▒█▒     ▒█▒     ",
-    "       ░███░   ▓██░       ▒████████████▓████░       ██     ",
-    " ░█▒      ▓██▒   ░████░          ░░▒▒▒▒░░          ░██     ",
-    "            ░███▒    ░█████░                               ",
-    "               ░████░     ░███████▓░          ▒███▒        ",
-    "                   ░████▒        ░░▓██████████▒░           ",
-    "          ░▓           ░▓████▓░                     ░▓     ",
-    "           ░                 ░██████▒░               ░     ",
-    "                                   ░▒████████▒░            ",
-    "        ▓                                    ░▒▓█████████▒ ",
-    "                    ▒                                      ",
-  },
-
-  buttons = {
-    { txt = "󰱼 Find file", keys = "f", cmd = "Telescope find_files" },
-  },
+  lsp = { sinnature = true },
 }
 
 M.term = {
@@ -72,7 +52,7 @@ M.term = {
   float = {
     relative = "editor",
     row = 0.3,
-    col = 0.25,
+    col = 0.50,
     width = 0.5,
     height = 0.4,
     border = "single",
