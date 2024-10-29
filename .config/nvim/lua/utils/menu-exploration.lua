@@ -21,6 +21,11 @@ M.options = {
     rtxt = "<leader>e",
   },
   {
+    name = "Telescope frecency",
+    cmd = ":Telescope frecency"
+
+  },
+  {
     name = "separator",
     hl = "ExGreen",
   },

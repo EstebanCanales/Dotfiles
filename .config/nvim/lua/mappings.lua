@@ -14,7 +14,9 @@ map("n", "<leader>cn", [[<Cmd> NoiceDismiss <CR>]], { desc = "Dismiss Noice noti
 map("n", "<leader>sh", [[<Cmd>split<CR>]], { desc = "Split horizontal" })
 map("n", "<leader>sv", [[<Cmd>vsplit<CR>]], { desc = "Split horizontal" })
 
-map("n", "<leader>o", ":Oil<CR>", { desc = "Open oil" })
+map("n", "<leader>ol", ":Oil<CR>", { desc = "Open oil" })
+
+map("n", "<leader>fF", ":Telescope frecency<CR>", { desc = "A better Telescope"})
 
 map("n", "<leader>th", function()
   require("nvchad.themes").open { border = true }
@@ -25,3 +27,6 @@ map("n", "<leader>me", function()
   require("menu").open(menu_exploration.options, {border = true})
 end)
 
+vim.keymap.set("n", "<space>od", function()
+  require("dbee").open()
+end)

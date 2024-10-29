@@ -21,8 +21,10 @@ require("lazy").setup({
     branch = "v2.5",
     import = "nvchad.plugins",
   },
-
-  { import = "plugins" },
+--{ import = "plugins" },
+  { import = "plugins.base", },
+  { import = "plugins.dev", },
+  { import = "plugins.ui", },
 }, lazy_config)
 
 -- load theme

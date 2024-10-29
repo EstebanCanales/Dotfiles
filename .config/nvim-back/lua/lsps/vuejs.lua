@@ -1,0 +1,3 @@
+return {
+	'vue-language-server'
+}

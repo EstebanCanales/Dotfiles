@@ -13,7 +13,7 @@ M.base46 = {
     ["@comment"] = { italic = true, bold = true },
   },
   integrations = {},
-  transparency = true,
+  transparency = false,
 }
 
 M.colorify = {
