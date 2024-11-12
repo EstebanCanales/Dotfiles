@@ -1,4 +1,6 @@
 /.config/raycast
 /.config/spicetify
+/config/.dbee_connections.json
 .config/raycast
 .config/spicetify
+./config/.dbee_connections.json
