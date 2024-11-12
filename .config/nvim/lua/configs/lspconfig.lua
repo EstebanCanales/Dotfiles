@@ -6,6 +6,7 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "cssls",
+  "arduino_language_server",
   "clangd",
   "ts_ls",
   "rust_analyzer",

@@ -1,7 +1,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-
+    clang = { "cpplint" },
     -- Web dev
     javascript = { "biome" },
     javascriptreact = { "biome" },
@@ -11,7 +11,7 @@ local options = {
     html = { "biome" },
     json = { "biome" },
     jsonc = { "biome" },
-    astro = { "biome"},
+    astro = { "biome" },
   },
 
   format_on_save = {

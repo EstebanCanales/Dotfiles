@@ -22,3 +22,6 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+./config/github-copilot
+./config/spicetify
+

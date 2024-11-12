@@ -14,7 +14,7 @@ return {
       },
       scroll = {
         enable = true,
-        timing = require("mini.animate").gen_timing.linear { duration = 100, unit = "total" },
+        timing = require("mini.animate").gen_timing.linear { duration = 200, unit = "total" },
         subscroll = require("mini.animate").gen_subscroll.equal {
           move = true,
         },
