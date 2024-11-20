@@ -1,8 +1,7 @@
 #!/bin/bash
 
-set -e # Salir si ocurre algún error
+set -e 
 
-# Función para mostrar mensajes estilizados
 function print_message() {
   echo -e "\n\033[1;34m$1\033[0m"
 }
