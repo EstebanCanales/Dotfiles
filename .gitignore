@@ -1,2 +1,3 @@
-github-copilot
-spicetify
+.config/spicetify/
+.config/github-copilot/
+.config/raycast/
