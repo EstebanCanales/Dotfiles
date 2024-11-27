@@ -1,0 +1,3 @@
+return {
+	"cssmodules_ls",
+}

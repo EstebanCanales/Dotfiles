@@ -4,6 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 local servers = {
+  "dockerls",
   "html",
   "cssls",
   "arduino_language_server",
