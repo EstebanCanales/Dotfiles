@@ -1,97 +1,68 @@
-add_newline = false
-
-format = """
+format = """\
 [](#96CDFB)\
-$directory\
+($directory)\
 [ ](#96CDFB)\
 [](#DDB6F2)\
 $git_branch\
 $git_status\
 [ ](#DDB6F2)\
-$c\
-$deno\
-$elixir\
-$elm\
-$golang\
-$gradle\
-$haskell\
-$java\
-$julia\
-$lua\
+$fill\
 $nodejs\
-$nim\
 $rust\
-$scala\
-$docker_context\
-$cmd_duration
-$character
+$golang\
+$php\
+$bun\
+$java\
+$c\
+$conda\
+$zig\
+$cmd_duration\
+$time\
+\n$character\
 """
-[cmd_duration]
-show_milliseconds = true
-min_time = 1_000
-style = 'fg:#D9E0EE'
-format = '[$duration]($style)'
+
+# Disable the blank line at the beginning of the prompt
+add_newline = true
+
+# Command timeout
+command_timeout = 3600000
+
+[fill]
+symbol = ' '
 
 [character]
 success_symbol = "[❯](#C9CBFF)"
 error_symbol = "[❯](#F28FAD)"
 vimcmd_symbol = "[❮](#ABE9B3)"
 
-[aws]
-symbol = "  "
-style = "fg:#C8A2E1"  # Catppuccin color for AWS
-format = '[ $symbol($version) ]($style)'
+[username]
+style_user = 'bold os'
+style_root = 'bold os_admin'
+format = '[󱗞 $user](fg:$style) ' # Mustache before the username
+disabled = false
+show_always = true
 
-[buf]
-symbol = " "
-style = "fg:#C8A2E1"  # Catppuccin color for buf
-format = '[ $symbol($version) ]($style)'
-
-[c]
-symbol = " "
-style = "fg:#F5C2E7"  # Catppuccin color for C
-format = '[ $symbol($version) ]($style)'
-
-[conda]
-symbol = " "
-style = "fg:#F5C2E7"  # Catppuccin color for conda
-format = '[ $symbol($version) ]($style)'
-
-[dart]
-symbol = " "
-style = "fg:#F9E2AF"  # Catppuccin color for Dart
-format = '[ $symbol($version) ]($style)'
-
-[deno]
-symbol = "🦕"
-style = "fg:#D5E8D4"  # Catppuccin color for Deno
-format = '[ $symbol($version) ]($style)'
-detect_extensions = []
-
+# Directory settings
 [directory]
+format = "[$path](bold $style)[$read_only]($read_only_style)"
+read_only = "  "
 style = "fg:#1E1D2D bg:#96CDFB"
-format = "[ $path ]($style)"
-truncation_length = 3
-read_only = " "
+truncation_symbol = "…/"
+truncate_to_repo = true
 
-[docker_context]
-symbol = " "
-style = "fg:#F5C2E7"  # Catppuccin color for Docker
-format = '[ $symbol($version) ]($style)'
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
-[elixir]
-symbol = " "
-style = "fg:#D5E8D4"  # Catppuccin color for Elixir
-format = '[ $symbol($version) ]($style)'
-
-[elm]
-symbol = " "
-style = "fg:#F5C2E7"  # Catppuccin color for Elm
-format = '[ $symbol($version) ]($style)'
-
+[cmd_duration]
+format = " took [ $duration]($style) "
+style = 'fg:#D9E0EE'
+min_time = 1_000
 
 [git_branch]
-symbol = ""
+symbol = " "
 style = "fg:#1E1D2D bg:#DDB6F2"
 format = '[ $symbol $branch ]($style)'
 
@@ -99,54 +70,55 @@ format = '[ $symbol $branch ]($style)'
 style = "fg:#1E1D2D bg:#DDB6F2"
 format = '[$all_status$ahead_behind ]($style)'
 
-# Other programming languages
-[golang]
-symbol = " "
-style = "fg:#F9E2AF"  # Catppuccin color for Go
-format = '[ $symbol($version) ]($style)'
-
-[haskell]
-symbol = " "
-style = "fg:#F9E2AF"  # Catppuccin color for Haskell
-format = '[ $symbol($version) ]($style)'
-
-[java]
-symbol = " "
-style = "fg:#F5C2E7"  # Catppuccin color for Java
-format = '[ $symbol($version) ]($style)'
-
-[julia]
-symbol = " "
-style = "fg:#F9E2AF"  # Catppuccin color for Julia
-format = '[ $symbol($version) ]($style)'
-
-[lua]
-symbol = " "
-style = "fg:#D5E8D4"  # Catppuccin color for Lua
-format = '[ $symbol($version) ]($style)'
-
-[nodejs]
-symbol = " "
-style = "fg:#F5C2E7"  # Catppuccin color for Node.js
-format = '[ $symbol($version) ]($style)'
-detect_extensions = []
+[docker_context]
+disabled = true
+symbol = " "
 
 [python]
-symbol = " "
-style = "fg:#F5C2E7"  # Catppuccin color for Python
-format = '[ $symbol($version) ]($style)'
+disabled = false
+format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\))](fg:#FF9E3B)($style)'
+symbol = " "
+version_format = "${raw}"
 
-[ruby]
-symbol = " "
-style = "fg:#D5E8D4"  # Catppuccin color for Ruby
-format = '[ $symbol($version) ]($style)'
+[java]
+format = '[[ $symbol ($version) ](fg:#FF5D62)]($style)'
+version_format = "${raw}"
+symbol = " "
+disabled = false
+
+[c]
+format = '[[ $symbol ($version) ](fg:#7FB4CA)]($style)'
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+[zig]
+format = '[[ $symbol ($version) ](fg:#FFA066)]($style)'
+version_format = "${raw}"
+disabled = false
+
+[bun]
+version_format = "${raw}"
+format = '[[ $symbol ($version) ](fg:#DCD7BA)]($style)'
+disabled = false
+
+[nodejs]
+symbol = ""
+format = '[[ $symbol ($version) ](fg:#87a987)]($style)'
 
 [rust]
 symbol = ""
-style = "fg:#F9E2AF"  # Catppuccin color for Rust
-format = '[ $symbol ($version) ]($style)'
+format = '[[ $symbol ($version) ](fg:#FF5D62)]($style)'
 
-[scala]
-symbol = " "
-style = "fg:#F9E2AF"  # Catppuccin color for Scala
-format = '[ $symbol($version) ]($style)'
+[golang]
+symbol = ""
+format = '[[ $symbol ($version) ](fg:#7FB4CA)]($style)'
+
+[php]
+symbol = ""
+format = '[[ $symbol ($version) ](fg:#FF9E3B)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"                           # Hour:Minute Format
+format = '[[   $time ](fg:#8BA4B0)]($style)'

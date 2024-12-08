@@ -6,6 +6,8 @@ return {
 
       opts.defaults = {
         file_ignore_patterns = {
+          "dist",
+          ".git",
           "node_modules",
           "package-lock.json",
           "yarn.lock",
@@ -21,14 +23,6 @@ return {
           },
         },
         sorting_strategy = "ascending",
-
-        -- Ajusta los caracteres de los bordes para que no se vean mal
-        --        borderchars =: {
-        --          prompt = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }, -- Bordes clásicos
-        --          results = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }, -- Resultados con bordes normales
-        --          preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }, -- Preview con bordes clásicos
-        --        },
-
         mappings = {
           i = {
             ["<C-Down>"] = actions.cycle_history_next,

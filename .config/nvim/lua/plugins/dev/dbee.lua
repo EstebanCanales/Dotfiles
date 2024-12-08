@@ -1,6 +1,7 @@
 -- I will use dadbob
 return {
   "kndndrj/nvim-dbee",
+  lazy = false,
   dependencies = {
     "MunifTanjim/nui.nvim",
   },

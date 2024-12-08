@@ -1,5 +1,6 @@
 return {
   "anurag3301/nvim-platformio.lua",
+  lazy = false,
   cmd = {
     "Pioinit",
     "Piorun",

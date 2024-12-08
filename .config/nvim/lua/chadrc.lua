@@ -7,13 +7,16 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin",
-  hl_override = {
-    Comment = { italic = true, bold = true },
-    ["@comment"] = { italic = true, bold = true },
+  treesitter = {
+    ["@variable"] = { fg = "#000000" },
   },
-  integrations = {},
+  theme = "catppuccin",
+  theme_toggle = { "catppuccin", "bearded-arc" },
   transparency = false,
+  hl_override = {
+    Comment = { fg = "#a6adc8", italic = true, bold = true },
+    ["@comment"] = { fg = "#a6adc8", italic = true , bold = true },
+  },
 }
 
 M.colorify = {
@@ -36,14 +39,14 @@ M.ui = {
   },
 
   statusline = {
-    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+    theme = "default", -- default/vscode/vscode_colored/minimal
   },
 
   tabufline = {
     enabled = false,
   },
 
-  lsp = { sinnature = true },
+  lsp = { signature = false },
 }
 
 M.term = {

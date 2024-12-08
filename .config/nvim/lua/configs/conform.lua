@@ -1,6 +1,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
+    go = {"gofumpt"},
     clang = { "cpplint" },
     -- Web dev
     javascript = { "biome" },

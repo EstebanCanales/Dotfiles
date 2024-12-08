@@ -1,14 +1,15 @@
--- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
 local servers = {
+  "gopls",
   "dockerls",
   "html",
   "cssls",
   "arduino_language_server",
   "clangd",
+  "java_language_server",
   "ts_ls",
   "rust_analyzer",
   "angularls",

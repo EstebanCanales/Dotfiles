@@ -10,7 +10,7 @@ return {
           opts = {
             render = "compact",
             background_colour = "#1a1b26",
-            timeout = 5000,
+            timeout = 1000,
           },
         }
       end,
