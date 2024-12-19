@@ -14,36 +14,36 @@ return {
     local startify = require "alpha.themes.theta"
     local devicons = require "nvim-web-devicons"
 
-    local git_dashboard = require("git-dashboard-nvim").setup {
-      top_padding = 0,
-      bottom_padding = 0,
-      show_current_branch = true,
-      hide_cursor = false,
-      centered = false,
-      branch = { "master", "main" },
-      use_git_username_as_author = true,
-      show_only_weeks_with_commits = true,
-      is_horizontal = true,
-      day_label_gap = "\t",
-      gap = "\t",
-      empty_square = "⬚",
-      filled_squares = { "■", "■", "■", "■", "■", "■" },
-      basepoints = { "master", "main" },
-      colors = {
-        days_and_months_labels = "#B4BEFE", -- Violeta suave pastel
-        empty_square_highlight = "#B4BEFE", -- Violeta suave para mantener la coherencia
-        filled_square_highlights = {
-          "#1E1E2E", -- Azul Oscuro (Catppuccin base)
-          "#292C3C", -- Tono medio oscuro
-          "#6E93CB", -- Azul medio pastel
-          "#C9CBFF", -- Violeta claro, suave y elegante
-          "#DDB6F2", -- Violeta pastel vibrante
-          "#F5C2E7", -- Rosado claro, tono violeta pálido
-        },
-        branch_highlight = "#D9E0EE", -- Blanco suave
-        dashboard_title = "#DDB6F2", -- Violeta pastel vibrante para resaltar
-      },
-    }
+    --    local git_dashboard = require("git-dashboard-nvim").setup {
+    --      top_padding = 0,
+    --      bottom_padding = 0,
+    --      show_current_branch = true,
+    --      hide_cursor = false,
+    --      centered = false,
+    --      branch = { "master", "main" },
+    --      use_git_username_as_author = true,
+    --      show_only_weeks_with_commits = true,
+    --      is_horizontal = true,
+    --      day_label_gap = "\t",
+    --      gap = "\t",
+    --      empty_square = "⬚",
+    --      filled_squares = { "■", "■", "■", "■", "■", "■" },
+    --      basepoints = { "master", "main" },
+    --      colors = {
+    --        days_and_months_labels = "#B4BEFE", -- Violeta suave pastel
+    --        empty_square_highlight = "#B4BEFE", -- Violeta suave para mantener la coherencia
+    --        filled_square_highlights = {
+    --          "#1E1E2E", -- Azul Oscuro (Catppuccin base)
+    --          "#292C3C", -- Tono medio oscuro
+    --          "#6E93CB", -- Azul medio pastel
+    --          "#C9CBFF", -- Violeta claro, suave y elegante
+    --          "#DDB6F2", -- Violeta pastel vibrante
+    --          "#F5C2E7", -- Rosado claro, tono violeta pálido
+    --        },
+    --        branch_highlight = "#D9E0EE", -- Blanco suave
+    --        dashboard_title = "#DDB6F2", -- Violeta pastel vibrante para resaltar
+    --      },
+    --    }
 
     local function surround(v)
       return " " .. v .. " "
@@ -63,13 +63,13 @@ return {
       return surround "" .. loaded_plugins .. "/" .. total_plugins .. " plugins loaded " .. nvim_version_info
     end
 
-    local heatmap = {
-      type = "text",
-      val = git_dashboard,
-      opts = {
-        position = "center",
-      },
-    }
+    --    local heatmap = {
+    --      type = "text",
+    --      val = git_dashboard,
+    --      opts = {
+    --        position = "center",
+    --      },
+    --    }
 
     local info = {
       type = "text",
@@ -84,11 +84,6 @@ return {
       type = "text",
       val = {
 
-        "                                                           ",
-        "                                                           ",
-        "                                                           ",
-        "                                                           ",
-        "                                                           ",
         "  ░░░▒▒▒▒░░░░                         ▒█▒                  ",
         " ░█▓▒▒▒▒▒▒▓██████████▒░                                    ",
         "                     ▒██████▒░                             ",
@@ -111,6 +106,7 @@ return {
         "                                   ░▒████████▒░            ",
         "        ▓                                    ░▒▓█████████▒ ",
         "                    ▒                                      ",
+        "                                                           ",
       },
       opts = {
         position = "center",
@@ -214,7 +210,7 @@ return {
     local config = {
       layout = {
         logo,
-        heatmap,
+        -- heatmap,
         mru,
         buttons,
         toast,

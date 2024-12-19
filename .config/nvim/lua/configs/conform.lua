@@ -1,7 +1,10 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    go = {"gofumpt"},
+    go = { "gofumpt" },
+    java = { "google-java-format" },
+    kotlin = { "ktlint" },
+
     clang = { "cpplint" },
     -- Web dev
     javascript = { "biome" },
