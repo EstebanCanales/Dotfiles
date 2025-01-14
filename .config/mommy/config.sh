@@ -1,0 +1,3 @@
+MOMMY_CAREGIVER='Terminal'
+MOMMY_PRONOUNS='she her'
+MOMMY_SWEETIE='Ann'

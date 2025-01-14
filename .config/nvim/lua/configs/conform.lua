@@ -9,8 +9,8 @@ local options = {
     -- Web dev
     javascript = { "biome" },
     javascriptreact = { "biome" },
-    typescript = { "biome" },
-    typescriptreact = { "biome" },
+    typescript = { "prettier" },
+    typescriptreact = { "prettier" },
     css = { "biome" },
     html = { "prettier" },
     json = { "biome" },

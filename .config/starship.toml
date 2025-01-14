@@ -1,124 +1,136 @@
-format = """\
-[](#96CDFB)\
-($directory)\
-[ ](#96CDFB)\
-[](#DDB6F2)\
+format = """
+[╭](fg:current_line)\
+$os\
+$directory\
 $git_branch\
-$git_status\
-[ ](#DDB6F2)\
 $fill\
 $nodejs\
-$rust\
-$golang\
-$php\
-$bun\
+$dotnet\
+$python\
 $java\
 $c\
-$conda\
-$zig\
 $cmd_duration\
+$shell\
 $time\
-\n$character\
+$username\
+$line_break\
+$character\
 """
 
-# Disable the blank line at the beginning of the prompt
+palette = 'dracula'
 add_newline = true
 
-# Command timeout
-command_timeout = 3600000
+[palettes.dracula]
+foreground = '#D9E0EE'  # Latte: '#4C4F69'
+background = '#1E1E2E'  # Fondo oscuro característico de Catppuccin
+current_line = '#575268'
+primary = '#1E1E2E'
+box = '#302D41'
+blue = '#89B4FA'
+cyan = '#94E2D5'
+green = '#A6E3A1'
+orange = '#FAB387'
+pink = '#F5C2E7'
+purple = '#CBA6F7'
+red = '#F38BA8'
+yellow = '#F9E2AF'
 
-[fill]
-symbol = ' '
-
-[character]
-success_symbol = "[❯](#C9CBFF)"
-error_symbol = "[❯](#F28FAD)"
-vimcmd_symbol = "[❮](#ABE9B3)"
-
-[username]
-style_user = 'bold os'
-style_root = 'bold os_admin'
-format = '[󱗞 $user](fg:$style) ' # Mustache before the username
+[os]
+format = '(fg:current_line)[](fg:red)[$symbol ](fg:primary bg:red)[](fg:red)'
 disabled = false
-show_always = true
 
-# Directory settings
+[os.symbols]
+Alpine = ''
+Amazon = ''
+Android = ''
+Arch = ''
+CentOS = ''
+Debian = ''
+EndeavourOS = ''
+Fedora = ''
+FreeBSD = ''
+Garuda = ''
+Gentoo = ''
+Linux = ''
+Macos = ''
+Manjaro = ''
+Mariner = ''
+Mint = ''
+NetBSD = ''
+NixOS = ''
+OpenBSD = ''
+OpenCloudOS = ''
+openEuler = ''
+openSUSE = ''
+OracleLinux = '⊂⊃'
+Pop = ''
+Raspbian = ''
+Redhat = ''
+RedHatEnterprise = ''
+Solus = ''
+SUSE = ''
+Ubuntu = ''
+Unknown = ''
+Windows = ''
+
 [directory]
-format = "[$path](bold $style)[$read_only]($read_only_style)"
-read_only = "  "
-style = "fg:#1E1D2D bg:#96CDFB"
-truncation_symbol = "…/"
-truncate_to_repo = true
-
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-
-[cmd_duration]
-format = " took [ $duration]($style) "
-style = 'fg:#D9E0EE'
-min_time = 1_000
+format = '[─](fg:current_line)[](fg:pink)[󰷏 ](fg:primary bg:pink)[](fg:pink bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
+home_symbol = " ~/"
+truncation_symbol = ' '
+truncation_length = 2
+read_only = '󱧵 '
+read_only_style = ''
 
 [git_branch]
-symbol = " "
-style = "fg:#1E1D2D bg:#DDB6F2"
-format = '[ $symbol $branch ]($style)'
-
-[git_status]
-style = "fg:#1E1D2D bg:#DDB6F2"
-format = '[$all_status$ahead_behind ]($style)'
-
-[docker_context]
-disabled = true
-symbol = " "
-
-[python]
-disabled = false
-format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\))](fg:#FF9E3B)($style)'
-symbol = " "
-version_format = "${raw}"
-
-[java]
-format = '[[ $symbol ($version) ](fg:#FF5D62)]($style)'
-version_format = "${raw}"
-symbol = " "
-disabled = false
-
-[c]
-format = '[[ $symbol ($version) ](fg:#7FB4CA)]($style)'
-symbol = " "
-version_format = "${raw}"
-disabled = false
-
-[zig]
-format = '[[ $symbol ($version) ](fg:#FFA066)]($style)'
-version_format = "${raw}"
-disabled = false
-
-[bun]
-version_format = "${raw}"
-format = '[[ $symbol ($version) ](fg:#DCD7BA)]($style)'
-disabled = false
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)[](fg:box)'
+symbol = ' '
 
 [nodejs]
-symbol = ""
-format = '[[ $symbol ($version) ](fg:#87a987)]($style)'
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = '󰎙 Node.js'
 
-[rust]
-symbol = ""
-format = '[[ $symbol ($version) ](fg:#FF5D62)]($style)'
+[dotnet]
+format = '[─](fg:current_line)[](fg:purple)[$symbol](fg:primary bg:purple)[](fg:purple bg:box)[ $tfm](fg:foreground bg:box)[](fg:box)'
+symbol = ' .NET'
 
-[golang]
-symbol = ""
-format = '[[ $symbol ($version) ](fg:#7FB4CA)]($style)'
+[python]
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' python'
 
-[php]
-symbol = ""
-format = '[[ $symbol ($version) ](fg:#FF9E3B)]($style)'
+[java]
+format = '[─](fg:current_line)[](fg:red)[$symbol](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' Java'
+
+[c]
+format = '[─](fg:current_line)[](fg:blue)[$symbol](fg:primary bg:blue)[](fg:blue bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' C'
+
+[fill]
+symbol = '─'
+style = 'fg:current_line'
+
+[cmd_duration]
+min_time = 500
+format = '[─](fg:current_line)[](fg:orange)[ ](fg:primary bg:orange)[](fg:orange bg:box)[ $duration ](fg:foreground bg:box)[](fg:box)'
+
+[shell]
+format = '[─](fg:current_line)[](fg:blue)[ ](fg:primary bg:blue)[](fg:blue bg:box)[ $indicator](fg:foreground bg:box)[](fg:box)'
+unknown_indicator = 'shell'
+powershell_indicator = 'powershell'
+fish_indicator = 'fish'
+disabled = false
 
 [time]
+format = '[─](fg:current_line)[](fg:purple)[󰦖 ](fg:primary bg:purple)[](fg:purple bg:box)[ $time](fg:foreground bg:box)[](fg:box)'
+time_format = '%H:%M'
 disabled = false
-time_format = "%R"                           # Hour:Minute Format
-format = '[[   $time ](fg:#F5C2E7)]($style)'
+
+[username]
+format = '[─](fg:current_line)[](fg:yellow)[ ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $user](fg:foreground bg:box)[](fg:box) '
+show_always = true
+
+[character]
+format = """
+[╰─$symbol](fg:current_line) """
+success_symbol = '[λ](fg:bold white)'
+error_symbol = '[×](fg:bold red)'

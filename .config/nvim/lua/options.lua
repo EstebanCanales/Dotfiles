@@ -26,3 +26,7 @@ local modes = { 'n', 'v', 'x' }
 for key, func in pairs(keymap) do
   vim.keymap.set(modes, key, func)
 end
+
+require("notify").setup({
+  background_colour = "#000000",
+})
