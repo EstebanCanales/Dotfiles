@@ -1,8 +1,0 @@
-[13:41:37 2025-01-02] FETCHING Version 2.38.7
-[13:41:37 2025-01-02] CREATING /Users/estebancanales/.spicetify
-[13:41:37 2025-01-02] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.38.7/spicetify-2.38.7-darwin-arm64.tar.gz
-[13:41:39 2025-01-02] EXTRACTING /Users/estebancanales/.spicetify/spicetify.tar.gz
-[13:41:39 2025-01-02] SETTING EXECUTABLE PERMISSIONS TO /Users/estebancanales/.spicetify/spicetify
-[13:41:39 2025-01-02] REMOVING /Users/estebancanales/.spicetify/spicetify.tar.gz
-[13:41:39 2025-01-02] spicetify v2.38.7 was installed successfully to /Users/estebancanales/.spicetify
-[13:41:39 2025-01-02] Run 'spicetify --help' to get started

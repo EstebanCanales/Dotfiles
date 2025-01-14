@@ -1,9 +1,0 @@
-{
-    "global": { "unsafe_ui": true },
-    "profiles": [
-        {
-            "name": "Default profile",
-            "selected": true
-        }
-    ]
-}

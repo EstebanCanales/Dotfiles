@@ -1,3 +1,0 @@
-return {
-  "ts_ls",
-}

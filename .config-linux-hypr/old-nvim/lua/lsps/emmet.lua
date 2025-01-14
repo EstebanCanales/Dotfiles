@@ -1,3 +1,0 @@
-return {
-	"emmet_ls",
-}
